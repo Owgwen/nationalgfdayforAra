@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy GF Day 💞</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #fff;
+      height: 100%;
+    }
+
+    body {
+      overflow-y: scroll;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px 20px 100px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: glow 2s infinite alternate;
+    }
+
+    .poem {
+      font-size: 1.2em;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 40px #ff6ec4, 0 0 60px #ff6ec4;
+      }
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: red;
+      transform: rotate(45deg);
+      animation: fly 10s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -7.5px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: -7.5px;
+    }
+
+    @keyframes fly {
+      0% {
+        top: 100%;
+        opacity: 1;
+        transform: rotate(45deg) translateX(0);
+      }
+      100% {
+        top: -10%;
+        opacity: 0;
+        transform: rotate(45deg) translateX(100px);
+      }
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      background-color: #ff6ec4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff90d4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>FOR MY BEST GERLFREN AND BEST GERL ITW 💖</h1>
+    <div class="poem">
+Happy GF Day DARLINGGGG.
+
+SEDIKIT UCAPAN DARI AK
+
+Aku bukan yang paling pintar mencintai,
+tapi kamu selalu jadi alasan kenapa aku belajar.
+
+Dari semua yang pernah datang dan pergi,
+kamu satu-satunya yang bikin aku yakin:
+“I didn’t know what I was lookin’ for 'til I found you.”
+
+Kamu bukan sempurna. Aku juga engga.
+Tapi bareng bareng, kita cukup.
+“You're everything I need, everything I breathe,
+everything I see, everything in me.”
+
+Dan kalau nanti ada hari yang berat,
+aku janji akan tetap bilang:
+“I’ll be right here every time you ask.”
+
+Karena kita bukan cuma saling punya 
+kita saling pilih.
+“Kita tidak saling kekurangan, hanya belum selesai tumbuh.”
+
+Dan di tengah semua yang bisa saja membuat kita menyerah,
+kita terus ingat satu hal:
+“Bayangkan jika kita tidak menyerah.”
+
+Hari ini mungkin sederhana,
+tapi kamu luar biasa.
+GF Day ini…
+hanya pengingat, bahwa aku masih dan akan terus jatuh cinta 
+pada segala yang kamu perjuangkan.
+
+sorry for being cringe
+sorry it is not enough
+sorry for everything
+thank and i love u forever 💖
+    </div>
+    <button onclick="alert('AILAFYUUU MOREE bubyp ARAA 😺💘')">Klik AILAFYUUU 😺</button>
+  </div>
+
+  <div class="hearts" id="heart-field"></div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 6) + 's';
+      document.getElementById('heart-field').appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+    setInterval(createHeart, 200);
+  </script>
+</body>
+</html>
